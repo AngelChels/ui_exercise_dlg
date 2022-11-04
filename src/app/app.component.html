@@ -1,0 +1,32 @@
+<div class="view">
+  <h1 class="title">Have a question? we can help</h1>
+  <!-- Rendering loaded FAQs in html view -->
+  <div
+    class="accordion-container"
+    *ngFor="let item of data; let i = index"
+    [class.active]="item.isOpen"
+  >
+    <div class="accordion-toggler" (click)="toggleAccordion(i)">
+      <div class="accordion-prefix">
+        <span class="label">Q{{ item.id }}</span>
+        {{ item.question }}
+      </div>
+      <div class="action">
+        <svg
+          class="svg-rotate__icon"
+          fill="#000"
+          width="30px"
+          height="30px"
+          viewBox="0 0 357 357"
+        >
+          <g id="add">
+            <path d="M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z" />
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="accordion-panel">
+      {{ item.answer }}
+    </div>
+  </div>
+</div>

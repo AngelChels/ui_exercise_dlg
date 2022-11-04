@@ -1,0 +1,77 @@
+.view {
+  padding: 1rem 2rem;
+}
+
+/* The tile of the view as displayed in the image */
+.title {
+  font-size: 32pt;
+  font-weight: bold;
+  font-family: "Oswald-Bold", Arial, Helvetica, sans-serif;
+  padding-bottom: 1.2rem;
+  border-bottom: 30px solid #000;
+  margin-bottom: 1.8rem;
+}
+
+.accordion-container {
+  border-bottom: 3px solid #000;
+}
+
+.accordion-toggler {
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+  padding: 1.75rem 1rem;
+  width: 100%;
+  font-size: 20px;
+  transition: 0.4s;
+  font-family: "Oswald-Regular", Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-prefix .label {
+  font-size: 22pt;
+  font-weight: bold;
+  font-family: "Oswald-Bold", Arial, Helvetica, sans-serif;
+  margin-right: 22px;
+}
+
+.accordion-toggler .action {
+  height: 45px;
+  width: 45px;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion-container .action .svg-rotate__icon {
+  transition: transform 0.2s;
+}
+
+/*
+==== ACTIVE CLASS =====
+Styles to be applied when the accordion is clicked
+*/
+.accordion-container.active .accordion-toggler {
+  background-color: #d7d7d7;
+}
+
+.accordion-container.active .accordion-panel {
+  height: 200px;
+  padding: 0.5rem;
+}
+
+.accordion-container.active .action .svg-rotate__icon {
+  transform: rotateZ(-45deg);
+}
+
+.accordion-panel {
+  padding: 0;
+  background-color: white;
+  height: 0;
+  overflow: hidden;
+  font-size: 20px;
+  transition: all 0.4s;
+  font-family: "Oswald-Regular", Arial, Helvetica, sans-serif;
+}
